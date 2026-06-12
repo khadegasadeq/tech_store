@@ -1,17 +1,71 @@
-# tech_store
+# Tech Store
 
-A new Flutter project.
+## Student Information
 
-## Getting Started
+**Name:** Khadega Sadeq Aldhabi
 
-This project is a starting point for a Flutter application.
+**Major:** Software Engineering - Level 3
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Project Overview
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Tech Store is a simple Flutter e-commerce application developed as a university assignment.
+
+The application allows users to browse products, view product details, add products to the shopping cart, and save products to favorites.
+
+State management is implemented using Provider.
+
+---
+
+## Features
+
+* View all products
+* Browse product categories
+* View product details
+* Add products to cart
+* Add products to favorites
+* Remove products from cart
+* Remove products from favorites
+* Cart counter updates automatically using Provider
+
+---
+
+## Technologies Used
+
+* Flutter
+* Dart
+* Provider (State Management)
+
+---
+
+## Project Structure
+
+* Home Screen
+* Categories Screen
+* Category Products Screen
+* Product Details Screen
+* Cart Screen
+* Favorites Screen
+
+---
+
+## Live Demo
+
+Netlify Link:
+https://sparkly-duckanoo-ef1b77.netlify.app/
+---
+
+## How to Run
+
+1. Clone the repository.
+2. Open the project in VS Code or Android Studio.
+3. Run:
+
+flutter pub get
+
+4. Start the application:
+
+flutter run
+
+---
