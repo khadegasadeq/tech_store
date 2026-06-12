@@ -36,6 +36,25 @@ State management is implemented using Provider.
 * Flutter
 * Dart
 * Provider (State Management)
+* HTTP (API Integration)
+
+---
+
+## API Integration
+
+This project uses a real REST API instead of static data.
+
+Products are fetched from:
+
+https://fakestoreapi.com/products
+
+Data is retrieved using HTTP GET request and converted from JSON using a Product model.
+
+---
+
+## Loading State
+
+A loading indicator is shown while fetching data from the API to improve user experience.
 
 ---
 
@@ -50,7 +69,12 @@ State management is implemented using Provider.
 
 ---
 
-##### Netlify Link: https://sparkly-duckanoo-ef1b77.netlify.app/
+## Live Demo
+
+Netlify Deployment:
+
+https://sparkly-duckanoo-ef1b77.netlify.app/
+
 ---
 
 ## How to Run
@@ -64,5 +88,3 @@ flutter pub get
 4. Start the application:
 
 flutter run
-
----
