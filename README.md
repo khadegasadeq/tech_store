@@ -50,10 +50,7 @@ State management is implemented using Provider.
 
 ---
 
-## Live Demo
-
-Netlify Link:
-https://sparkly-duckanoo-ef1b77.netlify.app/
+##### Netlify Link: https://sparkly-duckanoo-ef1b77.netlify.app/
 ---
 
 ## How to Run
