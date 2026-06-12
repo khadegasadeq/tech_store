@@ -5,7 +5,6 @@ import '../providers/shop_provider.dart';
 import 'product_details_screen.dart';
 import 'cart_screen.dart';
 import 'favorites_screen.dart';
-import 'package:provider/provider.dart';
 import 'categories_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -110,11 +109,16 @@ class HomeScreen extends StatelessWidget {
         
 
       ),
-      body: Padding(
+      body: provider.isLoading
+    ? const Center(
+        child: CircularProgressIndicator(),
+      )
+    : Padding(
         padding: const EdgeInsets.all(12),
         child: GridView.builder(
           itemCount: provider.products.length,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate:
+              const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 12,
             mainAxisSpacing: 12,
@@ -128,7 +132,8 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => ProductDetailsScreen(product: product),
+                    builder: (_) =>
+                        ProductDetailsScreen(product: product),
                   ),
                 );
               },
@@ -149,19 +154,14 @@ class HomeScreen extends StatelessWidget {
                     Expanded(
                       flex: 6,
                       child: ClipRRect(
-                        borderRadius: const BorderRadius.vertical(
+                        borderRadius:
+                            const BorderRadius.vertical(
                           top: Radius.circular(18),
                         ),
                         child: Image.network(
                           product.image,
                           width: double.infinity,
-                          fit: BoxFit.cover,
-                          errorBuilder: (context, error, stackTrace) {
-                            return const Icon(
-                              Icons.image_not_supported,
-                              size: 50,
-                            );
-                          },
+                          fit: BoxFit.contain,
                         ),
                       ),
                     ),
@@ -170,11 +170,14 @@ class HomeScreen extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(8),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment:
+                              MainAxisAlignment.spaceEvenly,
                           children: [
                             Text(
                               product.name,
                               textAlign: TextAlign.center,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
                               style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),

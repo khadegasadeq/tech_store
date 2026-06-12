@@ -7,7 +7,11 @@ import 'screens/home_screen.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (_) => ShopProvider(),
+      create: (_) {
+        final provider = ShopProvider();
+        provider.fetchProducts();
+        return provider;
+      },
       child: const MyApp(),
     ),
   );
